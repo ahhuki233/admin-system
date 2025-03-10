@@ -93,4 +93,15 @@
   transition: margin-left 0.3s ease; /* Smooth transition for margin */
 }
 
+/* Auto-collapse sidebar on mobile screens */
+@media (max-width: 768px) {
+  .app-menu.navbar-menu {
+    max-width: 180px; /* Collapsed width for mobile */
+  }
+
+  .main-content {
+    margin-left: 80px !important; /* Adjust main content margin */
+  }
+}
+
 

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
-import "../assets/scss/sidebar.css"; // Add your custom styles here
+import "remixicon/fonts/remixicon.css"; // Import Remix Icons
+import "../assets/scss/sidebar.css"; // Your custom styles
 
 const Sidebar = ({ isCollapsed, toggleSidebar }) => {
-  // Sidebar menu items
   const menuItems = [
     { label: "Dashboard", icon: "ri-dashboard-line", path: "/" },
     { label: "Client", icon: "ri-user-line", path: "/client" },
@@ -17,7 +17,7 @@ const Sidebar = ({ isCollapsed, toggleSidebar }) => {
       <SimpleBar className="h-100">
         <div className="navbar-brand-box">
           <div className="logo logo-light">
-            <span className="logo-lg">Admin Manage System</span>
+            <span className="logo-lg">Admin System</span>
           </div>
           <button className="btn toggle-btn" onClick={toggleSidebar}>
             <i className={`ri-${isCollapsed ? "menu-unfold-line" : "menu-fold-line"}`}></i>
